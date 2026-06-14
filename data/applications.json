@@ -1,5 +1,18 @@
 [
   {
+    "id": "1781414883627-d6327fa3807dd",
+    "name": "QA Signoff Report Manager",
+    "description": "QA Signoff Report Manager",
+    "url": "https://kaushalbtr.github.io/TaxCaddy-Tools/",
+    "createdBy": "Kaushal Balgamia",
+    "createdOn": "14/06/2026",
+    "createdAtEpoch": 1781414883627,
+    "displayOrder": -1781414883627,
+    "isActive": true,
+    "remark": "",
+    "clicks": 0
+  },
+  {
     "id": "1781414861408-d9a5aa9e5ef4b",
     "name": "Testcases & Bug Creator",
     "description": "Testcases & Bug Creator",
