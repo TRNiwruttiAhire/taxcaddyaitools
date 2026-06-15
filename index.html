@@ -459,8 +459,8 @@ window.TaxCaddyConfig = {
       
     ],
     github: {
-        owner:    "trniwruttiahire",
-        repo:     "TaxCaddyMasterApplication",
+        owner:    "TRNiwruttiAhire",
+        repo:     "taxcaddyaitools",
         branch:   "main",
         dataPath: "data/applications.json"
     }
@@ -743,6 +743,12 @@ const TaxCaddyStorage = (() => {
 
         if (!response.ok) {
             if (response.status === 404) {
+                var cached = getLocalTools();
+                if (cached.length > 0) {
+                    // Repo or file may be temporarily inaccessible — fall back to local cache
+                    setReadStatus("local-cache", "GitHub returned 404 — using cached data.");
+                    return cached;
+                }
                 // File doesn't exist in repo yet — treat as empty list
                 saveLocalTools([]);
                 setReadStatus("github");
