@@ -732,6 +732,18 @@ const TaxCaddyStorage = (() => {
 
     // ── GitHub Contents API ────────────────────────────────────────────────
     async function fetchGithubTools() {
+        var staticUrl = "./" + githubDataPath.replace(/^\/+/, "");
+        try {
+            var staticResponse = await fetch(staticUrl, { cache: "no-store" });
+            if (staticResponse.ok) {
+                var staticRaw = await staticResponse.json();
+                var staticTools = normalizeTools(Array.isArray(staticRaw) ? staticRaw : []);
+                saveLocalTools(staticTools);
+                setReadStatus("github");
+                return staticTools;
+            }
+        } catch (e) {}
+
         var apiUrl  = "https://api.github.com/repos/" + githubOwner + "/" + githubRepo + "/contents/" + githubDataPath + "?ref=" + githubBranch;
         var headers = { "Accept": "application/vnd.github.v3+json" };
         var pat = getGithubPat();
