@@ -1,18 +1,5 @@
 [
   {
-    "id": "1781700501931-42c48e53f98318",
-    "name": "Vinod Patil",
-    "description": "Test",
-    "url": "www.vinod.com",
-    "createdBy": "Test",
-    "createdOn": "17/06/2026",
-    "createdAtEpoch": 1781700501931,
-    "displayOrder": 1,
-    "isActive": false,
-    "remark": "",
-    "clicks": 0
-  },
-  {
     "id": "1781700472912-924efec7b8154",
     "name": "Vinod Test 1",
     "description": "test",
