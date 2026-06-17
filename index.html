@@ -46,13 +46,13 @@ body{font-family:'DM Sans',sans-serif;background:#EEF0F5;color:var(--text);min-h
 .config-bar{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1.5rem}
 .config-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:12px}
 .field-label{font-size:11px;font-weight:500;color:var(--muted);margin-bottom:4px;display:block}
-input[type=text],input[type=password],select{width:100%;height:36px;padding:0 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);outline:none;transition:border .15s}
+input[type=text],input[type=password],select{width:100%;height:36px;padding:0 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);outline:none}
 input[type=text]:focus,input[type=password]:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(24,95,165,0.1)}
 .mono{font-family:'DM Mono',monospace;font-size:12px}
 .config-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 
 /* BUTTONS */
-.btn{height:36px;padding:0 16px;border-radius:8px;font-size:13px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;border:1px solid var(--border);background:var(--white);color:var(--text);transition:all .15s;display:inline-flex;align-items:center;gap:6px}
+.btn{height:36px;padding:0 16px;border-radius:8px;font-size:13px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;border:1px solid var(--border);background:var(--white);color:var(--text)}
 .btn:hover{background:var(--gray)}
 .btn-primary{background:var(--navy);color:#fff;border-color:var(--navy)}
 .btn-primary:hover{background:var(--navy2)}
@@ -92,14 +92,14 @@ input[type=text]:focus,input[type=password]:focus,select:focus{border-color:var(
 .badge-info{background:var(--blue-light);color:var(--blue)}
 
 /* TOAST */
-.toast{position:fixed;bottom:1.5rem;right:1.5rem;padding:10px 18px;border-radius:10px;font-size:13px;font-weight:500;background:var(--navy);color:#fff;z-index:9999;transform:translateY(80px);opacity:0;transition:all .25s;pointer-events:none}
+.toast{position:fixed;bottom:1.5rem;right:1.5rem;padding:10px 18px;border-radius:10px;font-size:13px;font-weight:500;background:var(--navy);color:#fff;z-index:9999;transform:translateY(80px);opacity:0;transition:all .25s}
 .toast.show{transform:translateY(0);opacity:1}
 .toast.success{background:var(--success)}
 .toast.error{background:var(--error)}
 .toast.warn{background:var(--warn)}
 
 /* OUTPUT BOX */
-.output-box{background:var(--gray);border:1px solid var(--border);border-radius:8px;padding:1rem;font-size:13px;line-height:1.7;white-space:pre-wrap;min-height:80px;max-height:340px;overflow-y:auto;font-family:'DM Mono',monospace}
+.output-box{background:var(--gray);border:1px solid var(--border);border-radius:8px;padding:1rem;font-size:13px;line-height:1.7;white-space:pre-wrap;min-height:80px;max-height:340px;overflow-y:auto}
 .output-box.result{background:var(--white);font-family:'DM Sans',sans-serif;white-space:normal}
 
 /* TABLE */
@@ -121,7 +121,7 @@ input[type=text]:focus,input[type=password]:focus,select:focus{border-color:var(
 .step-detail{font-size:11px;color:var(--muted);margin-top:1px}
 
 /* TEXTAREA */
-textarea{width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);outline:none;resize:vertical;transition:border .15s;line-height:1.6}
+textarea{width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);outline:none;resize:vertical}
 textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(24,95,165,0.1)}
 
 
@@ -210,7 +210,7 @@ body.is-sorting { cursor:grabbing !important;user-select:none }
 .admin-status-toggle.is-active .admin-status-toggle__thumb { transform:translateX(16px) }
 
 /* Edit / Delete buttons */
-.admin-edit-button,.admin-delete-button { height:26px;padding:0 10px;border-radius:6px;font-size:11px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s;margin-right:4px }
+.admin-edit-button,.admin-delete-button { height:26px;padding:0 10px;border-radius:6px;font-size:11px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s;margin-right:6px;border:1px solid transparent }
 .admin-edit-button { background:var(--blue-light);color:var(--blue);border:1px solid var(--blue-light) }
 .admin-edit-button:hover { background:var(--blue);color:#fff }
 .admin-delete-button { background:var(--red-light);color:var(--error);border:1px solid var(--red-light) }
@@ -220,7 +220,7 @@ body.is-sorting { cursor:grabbing !important;user-select:none }
 .admin-modal { position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center }
 .admin-modal.is-hidden { display:none !important }
 .admin-modal__backdrop { position:absolute;inset:0;background:rgba(0,0,0,0.45) }
-.admin-modal__panel { position:relative;z-index:1;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.5rem;max-width:400px;width:90%;box-shadow:0 8px 32px rgba(0,0,0,.15) }
+.admin-modal__panel { position:relative;z-index:1;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.5rem;max-width:400px;width:90%;box-shadow:0 8px 32px rgba(0,0,0,.14) }
 .admin-modal__title { font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px }
 .admin-modal__message { font-size:13px;color:var(--muted);margin-bottom:1.25rem }
 .admin-modal__actions { display:flex;gap:8px;justify-content:flex-end }
@@ -264,27 +264,9 @@ body.is-sorting { cursor:grabbing !important;user-select:none }
 </div>
 
 <main class="main hidden">
-
-<!-- ═══════════════════════════════ AUTOMATION EXECUTION ═══════════════════════════════ -->
-
-<!-- ═══════════════════════════════ GITHUB BRANCH CLEANUP ═══════════════════════════════ -->
-
-<!-- ═══════════════════════════════ TAXCADDY PULSE ═══════════════════════════════ -->
-
-<!-- ═══════════════════════════════ TAXCADDY ENVISION ═══════════════════════════════ -->
-
-<!-- ═══════════════════════════════ TESTCASES & BUG CREATOR ═══════════════════════════════ -->
-
-<!-- ═══════════════════════════════ QA SIGNOFF REPORT MANAGER ═══════════════════════════════ -->
-
-<!-- ═══════════════════════════════ RELEASE BUG DASHBOARD CREATOR ═══════════════════════════════ -->
-
-<!-- ═══════════════════════════════ ADMIN USER PAGE ═══════════════════════════════ -->
 <div id="page-settings" class="page">
 
-  <!-- Admin Auth Panel -->
   <div class="card" style="margin-bottom:1rem">
-    <!-- Signed-out: PAT entry -->
     <div id="adminSignInSection">
       <div style="display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap">
         <div style="flex:1;min-width:220px">
@@ -294,27 +276,23 @@ body.is-sorting { cursor:grabbing !important;user-select:none }
         <button class="btn btn-primary" id="signInAdminButton" type="button">Connect to GitHub</button>
       </div>
       <div id="adminAuthStatus" style="margin-top:6px;font-size:12px;color:var(--error)"></div>
-      <p style="font-size:11px;color:var(--muted);margin-top:6px">Enter a GitHub PAT with <strong>Contents: Read &amp; Write</strong> access to this repo. Stored in your browser only &mdash; never committed to the repo.</p>
+      <p style="font-size:11px;color:var(--muted);margin-top:6px">Enter a GitHub PAT with <strong>Contents: Read &amp; Write</strong> access to this repo. Stored in your browser only &mdash; never committed.</p>
     </div>
-    <!-- Signed-in: user info -->
     <div id="adminSignedInSection" class="is-hidden" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
       <span id="adminUserLabel" style="font-size:13px;color:var(--text)"></span>
       <button class="btn btn-sm" id="signOutAdminButton" type="button">Sign Out</button>
     </div>
   </div>
 
-  <!-- Not-authorised message -->
   <div class="card is-hidden" id="adminAccessMessage" aria-live="polite">
     <div class="card-title" style="color:var(--error)">Not Authorised</div>
     <div style="font-size:13px;color:var(--error)">You are not an authorised user to access this page. To manage tools from the Admin User page.</div>
   </div>
 
-  <!-- Toggle row -->
   <div style="display:flex;justify-content:flex-end;align-items:center;gap:10px;margin-bottom:0.75rem;flex-wrap:wrap">
     <button class="btn btn-sm is-hidden" id="toggleAdminFormButton" type="button" aria-expanded="true" aria-controls="adminPanel">Hide Form Fields</button>
   </div>
 
-  <!-- Add / Edit Application Form -->
   <div id="adminPanel" class="is-hidden">
     <div class="section-hd" style="margin-bottom:0.75rem">
       <div><h2>Add New Application</h2><p>Add a new application to the TaxCaddy Master Application.</p></div>
@@ -352,7 +330,6 @@ body.is-sorting { cursor:grabbing !important;user-select:none }
     </div>
   </div>
 
-  <!-- Saved Applications list -->
   <div class="card is-hidden" id="adminListSection" style="margin-top:1rem">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:10px">
       <div>
@@ -387,7 +364,6 @@ body.is-sorting { cursor:grabbing !important;user-select:none }
     </div>
   </div>
 
-  <!-- Delete confirm modal -->
   <div class="admin-modal is-hidden" id="adminDeleteModal" role="dialog" aria-modal="true" aria-labelledby="adminDeleteModalTitle">
     <div class="admin-modal__backdrop" data-admin-modal-close="cancel"></div>
     <div class="admin-modal__panel">
@@ -401,18 +377,12 @@ body.is-sorting { cursor:grabbing !important;user-select:none }
   </div>
 
 </div>
-
-
-
 </main>
 </div>
 
-<!-- TOAST -->
 <div id="toast" class="toast"></div>
 
 <script>
-// ─── NAV & TOAST ──────────────────────────────────────────
-
 function showPage(id){
   var dynamicToolFrame = document.getElementById('dynamicToolFrame');
   if(dynamicToolFrame) dynamicToolFrame.classList.remove('active');
@@ -443,20 +413,14 @@ function toast(msg, type){
   el.textContent=msg; el.className='toast show '+(type||'');
   setTimeout(function(){el.className='toast'},3200);
 }
-
 </script>
 
-<!-- App Config -->
 <script>
-// TaxCaddy Application Configuration
-// GitHub usernames listed here are the only accounts allowed to manage applications via the Admin page.
-// Leave allowedGithubUsernames empty ([]) to allow any valid PAT holder to administer.
 window.TaxCaddyConfig = {
     allowedGithubUsernames: [
         "trniwruttiahire",
         "sunilguravtr",
         "jantoshbansaltr"
-      
     ],
     github: {
         owner:    "TRNiwruttiAhire",
@@ -465,10 +429,8 @@ window.TaxCaddyConfig = {
         dataPath: "data/applications.json"
     }
 };
-
 </script>
 
-<!-- TaxCaddy Storage -->
 <script>
 const TaxCaddyStorage = (() => {
     const savedToolsStorageKey     = "taxCaddySavedTools";
@@ -479,12 +441,10 @@ const TaxCaddyStorage = (() => {
     const config       = window.TaxCaddyConfig || {};
     const githubConfig = config.github || {};
 
-    // Allowed GitHub usernames (admin allowlist — empty means any valid PAT holder can admin)
     const allowedGithubUsernames = (config.allowedGithubUsernames || [])
         .map(function(u) { return String(u || "").trim().toLowerCase(); })
         .filter(Boolean);
 
-    // GitHub repo settings
     const githubOwner    = String(githubConfig.owner    || "").trim();
     const githubRepo     = String(githubConfig.repo     || "").trim();
     const githubBranch   = String(githubConfig.branch   || "main").trim();
@@ -502,7 +462,6 @@ const TaxCaddyStorage = (() => {
         lastWriteError: ""
     };
 
-    // ── Status helpers ─────────────────────────────────────────────────────
     function setReadStatus(source, errorMessage) {
         lastSyncStatus = Object.assign({}, lastSyncStatus, { readSource: source, lastReadError: String(errorMessage || "") });
     }
@@ -515,7 +474,6 @@ const TaxCaddyStorage = (() => {
         return Object.assign({}, lastSyncStatus);
     }
 
-    // ── Tool normalisation ─────────────────────────────────────────────────
     function normalizeTool(tool) {
         var createdAtEpoch = Number.isFinite(tool.createdAtEpoch) ? tool.createdAtEpoch : 0;
         return {
@@ -542,7 +500,6 @@ const TaxCaddyStorage = (() => {
             : [];
     }
 
-    // ── Local storage ──────────────────────────────────────────────────────
     function getLocalTools() {
         try {
             var raw    = window.localStorage.getItem(savedToolsStorageKey);
@@ -575,7 +532,6 @@ const TaxCaddyStorage = (() => {
         notifySavedToolsChanged();
     }
 
-    // ── GitHub PAT & user session ──────────────────────────────────────────
     function getGithubPat() {
         return String(window.localStorage.getItem(savedGithubPatKey) || "").trim();
     }
@@ -609,7 +565,6 @@ const TaxCaddyStorage = (() => {
         window.localStorage.removeItem(savedGithubUserKey);
     }
 
-    // ── Auth: sign in with PAT (verifies via GitHub API /user endpoint) ────
     async function signInWithGithubPat(pat) {
         var trimmedPat = String(pat || "").trim();
         if (!trimmedPat) {
@@ -618,8 +573,9 @@ const TaxCaddyStorage = (() => {
 
         var res = await fetch("https://api.github.com/user", {
             headers: {
-                "Authorization": "token " + trimmedPat,
-                "Accept":        "application/vnd.github.v3+json"
+                "Authorization": "Bearer " + trimmedPat,
+                "Accept":        "application/vnd.github+json",
+                "X-GitHub-Api-Version": "2022-11-28"
             }
         });
 
@@ -633,7 +589,6 @@ const TaxCaddyStorage = (() => {
         var user     = await res.json();
         var username = String(user.login || "").trim().toLowerCase();
 
-        // Check data/admins.json first (managed via UI), fall back to config.js list
         var effectiveAllowed = allowedGithubUsernames;
         if (useGithub && allowedGithubUsernames.length > 0) {
             var fromRepo = await fetchAdminUsers(trimmedPat);
@@ -668,12 +623,9 @@ const TaxCaddyStorage = (() => {
         clearGithubUser();
     }
 
-    // Called once on page load to restore signed-in state from localStorage.
-    // No real-time subscription needed for PAT-based auth.
     function subscribeToAuthChanges(callback) {
         var currentUser = getCurrentAdminUser();
         if (typeof callback === "function") {
-            // Use setTimeout so the caller's state is fully initialized before callback runs
             window.setTimeout(function() { callback(currentUser); }, 0);
         }
         return function() {};
@@ -684,15 +636,21 @@ const TaxCaddyStorage = (() => {
         return msg.includes("not authorised") || msg.includes("not authorized");
     }
 
-    // ── Admin access list (data/admins.json in repo) ───────────────────────
     var adminUsersPath = "data/admins.json";
 
+    function buildGithubHeaders(pat) {
+        return {
+            "Accept": "application/vnd.github+json",
+            "Authorization": "Bearer " + pat,
+            "X-GitHub-Api-Version": "2022-11-28"
+        };
+    }
+
     async function fetchAdminUsers(pat) {
-        // Returns array of lowercase usernames from data/admins.json, or null if file absent
         var apiUrl  = "https://api.github.com/repos/" + githubOwner + "/" + githubRepo + "/contents/" + adminUsersPath + "?ref=" + githubBranch;
-        var headers = { "Accept": "application/vnd.github.v3+json", "Authorization": "token " + pat };
+        var headers = buildGithubHeaders(pat);
         var res = await fetch(apiUrl, { headers: headers });
-        if (!res.ok) return null; // file not yet created — fall back to config.js list
+        if (!res.ok) return null;
         var data    = await res.json();
         var text    = decodeURIComponent(escape(atob(data.content.replace(/\n/g, ""))));
         var parsed  = JSON.parse(text);
@@ -713,9 +671,8 @@ const TaxCaddyStorage = (() => {
         if (!pat) throw new Error("Not connected to GitHub.");
         var normalized = usernames.map(function(u) { return String(u || "").trim().toLowerCase(); }).filter(Boolean);
         var apiUrl  = "https://api.github.com/repos/" + githubOwner + "/" + githubRepo + "/contents/" + adminUsersPath;
-        var headers = { "Authorization": "token " + pat, "Accept": "application/vnd.github.v3+json", "Content-Type": "application/json" };
+        var headers = Object.assign({}, buildGithubHeaders(pat), { "Content-Type": "application/json" });
 
-        // Get existing SHA if file exists
         var sha = "";
         try {
             var cur = await fetch(apiUrl + "?ref=" + githubBranch, { headers: headers });
@@ -732,12 +689,9 @@ const TaxCaddyStorage = (() => {
         return normalized;
     }
 
-    // ── GitHub Contents API ────────────────────────────────────────────────
     async function fetchGithubTools() {
         var pat = getGithubPat();
 
-        // When no PAT is available, fetch via raw.githubusercontent.com to avoid
-        // the GitHub API unauthenticated rate limit (60 req/hr per IP).
         if (!pat) {
             var rawUrl = "https://raw.githubusercontent.com/" + githubOwner + "/" + githubRepo + "/" + githubBranch + "/" + githubDataPath;
             var rawResponse = await fetch(rawUrl);
@@ -758,22 +712,23 @@ const TaxCaddyStorage = (() => {
         }
 
         var apiUrl  = "https://api.github.com/repos/" + githubOwner + "/" + githubRepo + "/contents/" + githubDataPath + "?ref=" + githubBranch;
-        var headers = { "Accept": "application/vnd.github.v3+json", "Authorization": "token " + pat };
+        var headers = buildGithubHeaders(pat);
 
         var response = await fetch(apiUrl, { headers: headers });
 
         if (!response.ok) {
             if (response.status === 404) {
-                // File doesn't exist in repo yet — treat as empty list
                 saveLocalTools([]);
                 setReadStatus("github");
                 return [];
+            }
+            if (response.status === 401) {
+                throw new Error("GitHub PAT is invalid or expired. Please reconnect on the Admin page.");
             }
             throw new Error("Failed to load applications from GitHub: HTTP " + response.status);
         }
 
         var data       = await response.json();
-        // GitHub Contents API returns file content as base64
         var jsonText   = decodeURIComponent(escape(atob(data.content.replace(/\n/g, ""))));
         var raw        = JSON.parse(jsonText);
         var tools      = normalizeTools(Array.isArray(raw) ? raw : []);
@@ -792,23 +747,18 @@ const TaxCaddyStorage = (() => {
         }
 
         var apiUrl  = "https://api.github.com/repos/" + githubOwner + "/" + githubRepo + "/contents/" + githubDataPath;
-        var headers = {
-            "Authorization": "token " + pat,
-            "Accept":        "application/vnd.github.v3+json",
+        var headers = Object.assign({}, buildGithubHeaders(pat), {
             "Content-Type":  "application/json"
-        };
+        });
 
-        // Get current SHA — required by GitHub API for updates
         var sha = "";
         try {
-            var currentRes = await fetch(apiUrl, { headers: headers });
+            var currentRes = await fetch(apiUrl + "?ref=" + githubBranch, { headers: headers });
             if (currentRes.ok) {
                 var current = await currentRes.json();
                 sha = current.sha || "";
             }
-        } catch (e) {
-            // File may not exist yet — proceed without SHA
-        }
+        } catch (e) {}
 
         var jsonContent   = JSON.stringify(normalizedTools, null, 2);
         var base64Content = btoa(unescape(encodeURIComponent(jsonContent)));
@@ -835,7 +785,6 @@ const TaxCaddyStorage = (() => {
         setWriteStatus("github");
     }
 
-    // Optimistic update: write to localStorage immediately, commit to GitHub, roll back on failure
     async function runOptimisticGithubUpdate(nextTools) {
         var previousTools = getLocalTools();
         var normalized    = normalizeTools(nextTools);
@@ -852,7 +801,6 @@ const TaxCaddyStorage = (() => {
         return normalized;
     }
 
-    // ── Public data API ────────────────────────────────────────────────────
     async function getAllTools() {
         if (useGithub) {
             try {
@@ -924,7 +872,6 @@ const TaxCaddyStorage = (() => {
         return function() {};
     }
 
-    // ── Storage / write notes ──────────────────────────────────────────────
     function getStorageNote() {
         if (!useGithub) {
             return "GitHub repo not configured. Set owner and repo in config.js to enable GitHub sync.";
@@ -945,7 +892,6 @@ const TaxCaddyStorage = (() => {
         return "Application " + actionName + " in browser cache only.";
     }
 
-    // ── Public API ─────────────────────────────────────────────────────────
     return {
         useGithub,
         githubOwner,
@@ -978,540 +924,6 @@ const TaxCaddyStorage = (() => {
 })();
 
 window.TaxCaddyStorage = TaxCaddyStorage;
-</script>
-
-<!-- Admin User page logic -->
-<script>
-
-const storage = window.TaxCaddyStorage;
-const SAVED_TOOLS_COLUMN_COUNT = 8;
-const STATUS_SIGN_IN = "Enter your GitHub PAT to access admin features.";
-const STATUS_LOADING_TOOLS = "Loading saved applications...";
-const STATUS_NO_TOOLS = "No applications saved yet.";
-
-const adminPanel = document.getElementById("adminPanel");
-const adminListSection = document.getElementById("adminListSection");
-const adminToolForm = document.getElementById("adminToolForm");
-const toolName = document.getElementById("toolName");
-const toolDescription = document.getElementById("toolDescription");
-const toolUrl = document.getElementById("toolUrl");
-const createdBy = document.getElementById("createdBy");
-const descriptionCount = document.getElementById("descriptionCount");
-const activeApplicationsCount = document.getElementById("activeApplicationsCount");
-const inactiveApplicationsCount = document.getElementById("inactiveApplicationsCount");
-const savedToolsTableBody = document.getElementById("savedToolsTableBody");
-const dynamicToolNav = document.getElementById("dynamicToolNav");
-const dynamicToolFrame = document.getElementById("dynamicToolFrame");
-const dynamicToolIframe = document.getElementById("dynamicToolIframe");
-const clearAllApplicationsButton = document.getElementById("clearAllApplicationsButton");
-const toggleAdminFormButton = document.getElementById("toggleAdminFormButton");
-const resetButton = document.getElementById("resetButton");
-const saveApplicationButton = document.getElementById("saveApplicationButton");
-const adminActionMessage = document.getElementById("adminActionMessage");
-const adminStorageNote = document.getElementById("adminStorageNote");
-const signInAdminButton    = document.getElementById("signInAdminButton");
-const signOutAdminButton   = document.getElementById("signOutAdminButton");
-const adminAuthStatus      = document.getElementById("adminAuthStatus");
-const adminSignInSection   = document.getElementById("adminSignInSection");
-const adminSignedInSection = document.getElementById("adminSignedInSection");
-const adminUserLabel       = document.getElementById("adminUserLabel");
-const githubPatInput       = document.getElementById("githubPatInput");
-const adminAccessMessage   = document.getElementById("adminAccessMessage");
-const adminDeleteModal = document.getElementById("adminDeleteModal");
-const adminDeleteModalMessage = document.getElementById("adminDeleteModalMessage");
-const adminDeleteCancelButton = document.getElementById("adminDeleteCancelButton");
-const adminDeleteConfirmButton = document.getElementById("adminDeleteConfirmButton");
-
-let renderedTools = [];
-let adminUser = storage.getCurrentAdminUser();
-let isRefreshingSavedTools = false;
-let pendingDeleteResolver = null;
-let areInteractionsInitialized = false;
-let editingToolId = "";
-let draggedToolId = "";
-let dragTargetToolId = "";
-let activeToolPageId = "";
-
-const toolNavPalette = ["#185FA5", "#E24B4A", "#1D9E75", "#534AB7", "#BA7517", "#993C1D", "#059669"];
-
-function escapeHtml(value) {
-    return String(value)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#39;");
-}
-
-function getSignedInStatusMessage() {
-    return adminUser
-        ? "Connected as: " + (adminUser.displayName || adminUser.username || "Admin")
-        : "Enter your GitHub PAT to access admin features.";
-}
-
-function getToolById(toolId) {
-    return renderedTools.find((savedTool) => savedTool.id === toolId) || null;
-}
-
-function getToolPageId(toolId) {
-    return `tool-${String(toolId || "").trim().replace(/[^a-zA-Z0-9_-]/g, "-")}`;
-}
-
-function getVisibleDashboardTools(savedTools) {
-    return savedTools.filter((tool) => tool.isActive && String(tool.url || "").trim());
-}
-
-function getToolByPageId(pageId) {
-    return getVisibleDashboardTools(renderedTools).find((tool) => getToolPageId(tool.id) === pageId) || null;
-}
-
-function openDynamicToolPage(pageId) {
-    const tool = getToolByPageId(pageId);
-    if (!tool || !dynamicToolFrame || !dynamicToolIframe) { showPage("settings"); return; }
-    document.querySelectorAll(".page").forEach((page) => page.classList.remove("active"));
-    document.querySelectorAll(".nav-item").forEach((item) => item.classList.remove("active"));
-    if (dynamicToolIframe.getAttribute("src") !== tool.url) { dynamicToolIframe.setAttribute("src", tool.url); }
-    dynamicToolFrame.classList.add("active");
-    const main = document.querySelector(".main");
-    if (main) { main.classList.add("hidden"); }
-    activeToolPageId = pageId;
-    window.activeToolPageId = pageId;
-    const navItem = document.querySelector(`[data-page="${pageId}"]`);
-    if (navItem) { navItem.classList.add("active"); }
-}
-
-window.openDynamicToolPage = openDynamicToolPage;
-
-function renderToolNavigation(savedTools) {
-    if (!dynamicToolNav) { return; }
-    const visibleTools = getVisibleDashboardTools(savedTools);
-    const isSettingsOpen = Boolean(document.getElementById("page-settings") && document.getElementById("page-settings").classList.contains("active"));
-    if (visibleTools.length === 0) {
-        dynamicToolNav.innerHTML = '<div class="nav-item is-empty">No applications yet</div>';
-        activeToolPageId = "";
-        window.activeToolPageId = "";
-        if (dynamicToolFrame) { dynamicToolFrame.classList.remove("active"); }
-        if (dynamicToolIframe) { dynamicToolIframe.setAttribute("src", "about:blank"); }
-        showPage("settings");
-        return;
-    }
-    dynamicToolNav.innerHTML = visibleTools.map((tool, index) => {
-        const pageId = getToolPageId(tool.id);
-        return `<div class="nav-item${pageId === activeToolPageId ? " active" : ""}" onclick="showToolPage('${pageId}')" data-page="${pageId}" title="${escapeHtml(tool.name)}"><div class="nav-dot" style="background:${toolNavPalette[index % toolNavPalette.length]}"></div> ${escapeHtml(tool.name)}</div>`;
-    }).join("");
-    if (getToolByPageId(activeToolPageId)) { return; }
-    if (!isSettingsOpen) { openDynamicToolPage(getToolPageId(visibleTools[0].id)); }
-}
-
-function getReorderedTools(draggedId, targetId) {
-    const nextTools = [...renderedTools];
-    const draggedIndex = nextTools.findIndex((tool) => tool.id === draggedId);
-    const targetIndex  = nextTools.findIndex((tool) => tool.id === targetId);
-    if (draggedIndex < 0 || targetIndex < 0 || draggedIndex === targetIndex) { return []; }
-    const [draggedTool] = nextTools.splice(draggedIndex, 1);
-    nextTools.splice(targetIndex, 0, draggedTool);
-    return nextTools.map((tool, index) => ({ ...tool, displayOrder: index + 1 }));
-}
-
-function clearDragIndicators() {
-    savedToolsTableBody.querySelectorAll(".is-dragging, .is-drop-target").forEach((row) => row.classList.remove("is-dragging", "is-drop-target"));
-}
-
-function updateDragTarget(clientX, clientY) {
-    const hoveredElement = document.elementFromPoint(clientX, clientY);
-    const row = hoveredElement && hoveredElement.closest("[data-tool-id]");
-    const nextTargetToolId = row ? row.getAttribute("data-tool-id") || "" : "";
-    dragTargetToolId = nextTargetToolId !== draggedToolId ? nextTargetToolId : "";
-    clearDragIndicators();
-    const draggedRow = draggedToolId ? savedToolsTableBody.querySelector(`[data-tool-id="${draggedToolId}"]`) : null;
-    if (draggedRow) { draggedRow.classList.add("is-dragging"); }
-    if (dragTargetToolId) {
-        const dropRow = savedToolsTableBody.querySelector(`[data-tool-id="${dragTargetToolId}"]`);
-        if (dropRow) { dropRow.classList.add("is-drop-target"); }
-    }
-}
-
-async function completeDragReorder() {
-    const nextTools = dragTargetToolId ? getReorderedTools(draggedToolId, dragTargetToolId) : [];
-    draggedToolId = "";
-    dragTargetToolId = "";
-    document.body.classList.remove("is-sorting");
-    clearDragIndicators();
-    if (nextTools.length === 0) { return; }
-    try {
-        await storage.saveOrderedTools(nextTools);
-        await refreshSavedToolsView();
-        setAdminActionMessage("Application order updated successfully.");
-        refreshAdminAuthStatus();
-    } catch (error) { await handleActionError(error, "Reorder failed."); }
-}
-
-function setSavedToolsEmptyState(message) {
-    savedToolsTableBody.innerHTML = `<tr><td class="admin-list__empty" colspan="${SAVED_TOOLS_COLUMN_COUNT}">${escapeHtml(message)}</td></tr>`;
-}
-
-function updateApplicationCounts(savedTools) {
-    const activeCount   = savedTools.filter((tool) => tool.isActive).length;
-    const inactiveCount = savedTools.length - activeCount;
-    activeApplicationsCount.textContent   = String(activeCount);
-    inactiveApplicationsCount.textContent = String(inactiveCount);
-    if (clearAllApplicationsButton) { clearAllApplicationsButton.disabled = savedTools.length === 0; }
-}
-
-function updateDescriptionCount() { descriptionCount.textContent = toolDescription.value.length; }
-
-function setAdminFormCollapsed(isCollapsed) {
-    adminPanel.classList.toggle("is-collapsed", isCollapsed);
-    toggleAdminFormButton.setAttribute("aria-expanded", String(!isCollapsed));
-    toggleAdminFormButton.textContent = isCollapsed ? "Show Form Fields" : "Hide Form Fields";
-}
-
-function refreshAdminAuthStatus(message) {
-    if (adminAuthStatus) adminAuthStatus.textContent = message || "";
-}
-
-function setAdminActionMessage(message = "") {
-    adminActionMessage.textContent = message;
-    adminActionMessage.classList.toggle("is-active", Boolean(message));
-}
-
-function getStorageNoteMessage() { return storage.getStorageNote(); }
-function getWriteSuccessMessage(actionName) { return storage.getWriteSuccessMessage(actionName); }
-
-function setAdminAccessState(isAuthorized, statusMessage, showUnauthorizedMessage) {
-    adminAccessMessage.classList.toggle("is-hidden", isAuthorized || !showUnauthorizedMessage);
-    adminPanel.classList.toggle("is-hidden", !isAuthorized);
-    adminListSection.classList.toggle("is-hidden", !isAuthorized);
-    toggleAdminFormButton.classList.toggle("is-hidden", !isAuthorized);
-    if (adminSignInSection)   adminSignInSection.classList.toggle("is-hidden", isAuthorized);
-    if (adminSignedInSection) adminSignedInSection.classList.toggle("is-hidden", !isAuthorized);
-    if (isAuthorized && adminUser && adminUserLabel) {
-        adminUserLabel.textContent = "Connected as: " + (adminUser.displayName || adminUser.username || "Admin");
-    }
-    if (adminAuthStatus) adminAuthStatus.textContent = isAuthorized ? "" : (statusMessage || "");
-}
-
-function updateStorageNote() { adminStorageNote.textContent = getStorageNoteMessage(); }
-
-function closeDeleteModal(shouldDelete) {
-    adminDeleteModal.classList.add("is-hidden");
-    if (pendingDeleteResolver) { pendingDeleteResolver(shouldDelete); pendingDeleteResolver = null; }
-}
-
-function confirmDeleteTool(name) {
-    adminDeleteModalMessage.textContent = `Delete "${name}" from the application list?`;
-    adminDeleteModal.classList.remove("is-hidden");
-    adminDeleteConfirmButton.focus();
-    return new Promise((resolve) => { pendingDeleteResolver = resolve; });
-}
-
-function buildToolFromForm() {
-    const formData = new FormData(adminToolForm);
-    const existingTool = editingToolId ? getToolById(editingToolId) : null;
-    return storage.normalizeTool({
-        id:           existingTool ? existingTool.id          : `${Date.now()}-${Math.random().toString(16).slice(2)}`,
-        name:         String(formData.get("toolName")        || "").trim(),
-        description:  String(formData.get("toolDescription") || "").trim(),
-        url:          String(formData.get("toolUrl")         || "").trim(),
-        createdBy:    String(formData.get("createdBy")       || "").trim(),
-        createdOn:    existingTool ? existingTool.createdOn    : new Date().toLocaleDateString("en-GB"),
-        createdAtEpoch: existingTool ? existingTool.createdAtEpoch : Date.now(),
-        isActive:     existingTool ? existingTool.isActive     : true,
-        remark:       existingTool ? existingTool.remark || "" : "",
-        clicks:       existingTool ? existingTool.clicks       : 0
-    });
-}
-
-function updateFormActionState() {
-    const isEditing = Boolean(editingToolId);
-    resetButton.textContent          = isEditing ? "Cancel Edit"          : "Clear";
-    saveApplicationButton.textContent = isEditing ? "\u2713 Update Application" : "\u2713 Save Application";
-}
-
-function populateFormForEdit(tool) {
-    editingToolId = tool.id;
-    toolName.value        = tool.name;
-    toolDescription.value = tool.description;
-    toolUrl.value         = tool.url;
-    createdBy.value       = tool.createdBy;
-    updateDescriptionCount();
-    updateFormActionState();
-    setAdminFormCollapsed(false);
-    setAdminActionMessage("");
-    toolName.focus();
-}
-
-function clearEditState() { editingToolId = ""; updateFormActionState(); }
-
-function resetAdminForm() { adminToolForm.reset(); clearEditState(); updateDescriptionCount(); }
-
-function renderSavedToolsList(savedTools) {
-    renderedTools = savedTools;
-    updateApplicationCounts(savedTools);
-    updateStorageNote();
-    renderToolNavigation(savedTools);
-    if (savedTools.length === 0) { setSavedToolsEmptyState(STATUS_NO_TOOLS); return; }
-    savedToolsTableBody.innerHTML = savedTools.map((tool) => `
-        <tr class="admin-list__row" data-tool-id="${escapeHtml(tool.id)}">
-            <td><div class="admin-list__name-cell"><span class="admin-drag-handle" data-tool-drag="${escapeHtml(tool.id)}" aria-label="Drag to reorder ${escapeHtml(tool.name)}" title="Drag to reorder">&#8942;&#8942;</span><span>${escapeHtml(tool.name)}</span></div></td>
-            <td>${escapeHtml(tool.description)}</td>
-            <td><a class="admin-list__link" href="${escapeHtml(tool.url)}" target="_blank" rel="noreferrer">${escapeHtml(tool.url)}</a></td>
-            <td>${escapeHtml(tool.createdBy)}</td>
-            <td>${escapeHtml(tool.createdOn)}</td>
-            <td><button class="admin-status-toggle ${tool.isActive ? "is-active" : "is-inactive"}" type="button" data-tool-status-toggle="${escapeHtml(tool.id)}" aria-pressed="${tool.isActive}" aria-label="${tool.isActive ? "Set tool inactive" : "Set tool active"}"><span class="admin-status-toggle__track"><span class="admin-status-toggle__thumb"></span></span></button></td>
-            <td class="admin-list__action-cell"><button class="admin-edit-button" type="button" data-tool-edit="${escapeHtml(tool.id)}" aria-label="Edit ${escapeHtml(tool.name)}">Edit</button><button class="admin-delete-button" type="button" data-tool-delete="${escapeHtml(tool.id)}" aria-label="Delete ${escapeHtml(tool.name)}">Delete</button></td>
-        </tr>`).join("");
-}
-
-function renderCachedSavedTools() {
-    const cachedTools = storage.getCachedTools();
-    updateStorageNote();
-    if (cachedTools.length === 0 && storage.useGithub) { updateApplicationCounts([]); setSavedToolsEmptyState(STATUS_LOADING_TOOLS); return; }
-    renderSavedToolsList(cachedTools);
-}
-
-async function renderSavedTools() { renderSavedToolsList(await storage.getAllTools()); }
-
-async function refreshSavedTools() {
-    if (isRefreshingSavedTools) { return; }
-    isRefreshingSavedTools = true;
-    try { await renderSavedTools(); } finally { isRefreshingSavedTools = false; }
-}
-
-async function refreshSavedToolsView() { renderCachedSavedTools(); await refreshSavedTools(); }
-
-async function toggleToolStatus(toolId) {
-    const tool = getToolById(toolId);
-    if (!tool) { return; }
-    await storage.upsertLocalTool({ ...tool, isActive: !tool.isActive });
-    await refreshSavedTools();
-}
-
-async function handleActionError(error, fallbackMessage) {
-    const errorMessage = error && error.message ? error.message : fallbackMessage;
-    setAdminActionMessage("");
-    refreshAdminAuthStatus(errorMessage);
-    window.alert(errorMessage);
-}
-
-function initializeAdminInteractions() {
-    if (areInteractionsInitialized) { return; }
-    areInteractionsInitialized = true;
-
-    adminToolForm.addEventListener("submit", async (event) => {
-        event.preventDefault();
-        if (!adminUser) { setAdminAccessState(false, STATUS_SIGN_IN); return; }
-        try {
-            const actionName = editingToolId ? "updated" : "saved";
-            await storage.upsertLocalTool(buildToolFromForm());
-            resetAdminForm();
-            await refreshSavedToolsView();
-            setAdminActionMessage(getWriteSuccessMessage(actionName));
-            refreshAdminAuthStatus();
-        } catch (error) { setAdminActionMessage(""); await handleActionError(error, "Save failed."); }
-    });
-
-    savedToolsTableBody.addEventListener("click", async (event) => {
-        const editButton = event.target.closest("[data-tool-edit]");
-        if (editButton) {
-            const tool = getToolById(editButton.getAttribute("data-tool-edit"));
-            if (!tool) { return; }
-            populateFormForEdit(tool);
-            return;
-        }
-
-        const deleteButton = event.target.closest("[data-tool-delete]");
-        if (deleteButton) {
-            const tool = getToolById(deleteButton.getAttribute("data-tool-delete"));
-            if (!tool) { return; }
-            const shouldDelete = await confirmDeleteTool(tool.name);
-            if (!shouldDelete) { return; }
-            try {
-                await storage.deleteLocalTool(tool.id);
-                await refreshSavedToolsView();
-                refreshAdminAuthStatus(getWriteSuccessMessage("deleted"));
-            } catch (error) {
-                await handleActionError(error, "Delete failed.");
-            }
-            return;
-        }
-
-        const toggleButton = event.target.closest("[data-tool-status-toggle]");
-
-        if (!toggleButton) {
-            return;
-        }
-
-        try {
-            await toggleToolStatus(toggleButton.getAttribute("data-tool-status-toggle"));
-            refreshAdminAuthStatus(getWriteSuccessMessage("status updated"));
-        } catch (error) {
-            await handleActionError(error, "Status update failed.");
-        }
-    });
-
-    savedToolsTableBody.addEventListener("pointerdown", (event) => {
-        const dragHandle = event.target.closest("[data-tool-drag]");
-
-        if (!dragHandle) {
-            return;
-        }
-
-        const row = dragHandle.closest("[data-tool-id]");
-
-        if (!row) {
-            return;
-        }
-
-        event.preventDefault();
-        draggedToolId = row.getAttribute("data-tool-id") || "";
-        dragTargetToolId = "";
-        document.body.classList.add("is-sorting");
-        updateDragTarget(event.clientX, event.clientY);
-
-        const handlePointerMove = (moveEvent) => {
-            updateDragTarget(moveEvent.clientX, moveEvent.clientY);
-        };
-
-        const handlePointerUp = async (upEvent) => {
-            document.removeEventListener("pointermove", handlePointerMove);
-            document.removeEventListener("pointerup", handlePointerUp);
-            document.removeEventListener("pointercancel", handlePointerCancel);
-            updateDragTarget(upEvent.clientX, upEvent.clientY);
-            await completeDragReorder();
-        };
-
-        const handlePointerCancel = () => {
-            document.removeEventListener("pointermove", handlePointerMove);
-            document.removeEventListener("pointerup", handlePointerUp);
-            document.removeEventListener("pointercancel", handlePointerCancel);
-            draggedToolId = "";
-            dragTargetToolId = "";
-            document.body.classList.remove("is-sorting");
-            clearDragIndicators();
-        };
-
-        document.addEventListener("pointermove", handlePointerMove);
-        document.addEventListener("pointerup", handlePointerUp);
-        document.addEventListener("pointercancel", handlePointerCancel);
-    });
-
-    toggleAdminFormButton.addEventListener("click", () => {
-        setAdminFormCollapsed(!adminPanel.classList.contains("is-collapsed"));
-    });
-
-    clearAllApplicationsButton.addEventListener("click", async () => {
-      if (!adminUser) {
-        setAdminAccessState(false, STATUS_SIGN_IN);
-        return;
-      }
-
-      if (!window.confirm("Delete all saved applications? This cannot be undone.")) {
-        return;
-      }
-
-      try {
-        await storage.clearLocalTools();
-        resetAdminForm();
-        await refreshSavedToolsView();
-        setAdminActionMessage(getWriteSuccessMessage("cleared"));
-        refreshAdminAuthStatus();
-        showPage("settings");
-      } catch (error) {
-        await handleActionError(error, "Clear all failed.");
-      }
-    });
-
-    adminToolForm.addEventListener("reset", () => {
-        window.setTimeout(() => {
-            clearEditState();
-            updateDescriptionCount();
-            setAdminActionMessage("");
-        }, 0);
-    });
-
-    toolDescription.addEventListener("input", updateDescriptionCount);
-    adminDeleteCancelButton.addEventListener("click", () => {
-        closeDeleteModal(false);
-    });
-    adminDeleteConfirmButton.addEventListener("click", () => {
-        closeDeleteModal(true);
-    });
-    adminDeleteModal.addEventListener("click", (event) => {
-        if (event.target.closest("[data-admin-modal-close]")) {
-            closeDeleteModal(false);
-        }
-    });
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && !adminDeleteModal.classList.contains("is-hidden")) {
-            closeDeleteModal(false);
-        }
-    });
-    storage.subscribeToSavedToolsChanges((savedTools) => {
-        if (Array.isArray(savedTools)) {
-            renderSavedToolsList(savedTools);
-            return;
-        }
-
-        refreshSavedTools();
-    });
-}
-
-function applySignedInState() {
-    setAdminAccessState(true);
-    refreshAdminAuthStatus();
-    if (githubPatInput) githubPatInput.value = "";
-    refreshSavedToolsView();
-}
-
-function applySignedOutState(message = STATUS_SIGN_IN, showUnauthorizedMessage = false) {
-    setAdminAccessState(false, message, showUnauthorizedMessage);
-}
-
-initializeAdminInteractions();
-updateStorageNote();
-applySignedOutState();
-
-// Always load tools on page load — visible to all visitors without sign-in
-refreshSavedToolsView();
-
-// Restore signed-in state from localStorage if PAT is still stored
-storage.subscribeToAuthChanges(function(restoredUser) {
-    adminUser = restoredUser;
-    if (adminUser) { applySignedInState(); }
-});
-
-signInAdminButton.addEventListener("click", async () => {
-    const pat = githubPatInput ? githubPatInput.value.trim() : "";
-    if (!pat) {
-        if (adminAuthStatus) { adminAuthStatus.textContent = "Please enter your GitHub PAT."; adminAuthStatus.style.color = "var(--error)"; }
-        return;
-    }
-    signInAdminButton.disabled = true;
-    signInAdminButton.textContent = "Connecting...";
-    try {
-        adminUser = await storage.signInWithGithubPat(pat);
-        applySignedInState();
-    } catch (error) {
-        adminUser = null;
-        const msg = error && error.message ? error.message : "Connection failed.";
-        if (adminAuthStatus) { adminAuthStatus.textContent = msg; adminAuthStatus.style.color = "var(--error)"; }
-        applySignedOutState(msg, storage.isUnauthorizedAdminError(error));
-    } finally {
-        signInAdminButton.disabled = false;
-        signInAdminButton.textContent = "Connect to GitHub";
-    }
-});
-
-signOutAdminButton.addEventListener("click", () => {
-    adminUser = null;
-    storage.signOutAdmin();
-    applySignedOutState();
-});
-
-updateDescriptionCount();
-updateFormActionState();
-setAdminFormCollapsed(false);
 </script>
 </body>
 </html>
