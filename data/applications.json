@@ -1,18 +1,5 @@
 [
   {
-    "id": "1781868043298-76836240d19aa",
-    "name": "Niwrutti Automatin Runner Application",
-    "description": "Niwrutti Automatin Runner Application",
-    "url": "https://trniwruttiahire.github.io/taxcaddy-automation-runner/index.html",
-    "createdBy": "Niwrutti Ahire",
-    "createdOn": "19/06/2026",
-    "createdAtEpoch": 1781868043299,
-    "displayOrder": -1781868043299,
-    "isActive": false,
-    "remark": "",
-    "clicks": 0
-  },
-  {
     "id": "1781866335671-61db7f7f20caa",
     "name": "Automation Execution Tool",
     "description": "https://abhijeetpavaltr.github.io/AutomationServiceBasedExecutionDashboard/",
