@@ -877,14 +877,15 @@ const TaxCaddyStorage = (() => {
     }
 
     async function deleteLocalTool(toolId) {
-        var normalizedId = String(toolId || "").trim();
-        if (!normalizedId) return;
-        var remaining = getLocalTools().filter(function(t) { return t.id !== normalizedId; });
-        if (useGithub) { await runOptimisticGithubUpdate(remaining); return; }
-        saveLocalTools(remaining);
-        notifySavedToolsChanged();
-        setWriteStatus("local-cache");
-    }
+    var normalizedId = String(toolId || "").trim();
+    if (!normalizedId) return;
+    var current = await getAllTools();   // ✅ fetch fresh from GitHub first
+    var remaining = current.filter(function(t) { return t.id !== normalizedId; });
+    if (useGithub) { await runOptimisticGithubUpdate(remaining); return; }
+    saveLocalTools(remaining);
+    notifySavedToolsChanged();
+    setWriteStatus("local-cache");
+}
 
     async function saveOrderedTools(tools) {
         var normalized = normalizeTools(tools);
